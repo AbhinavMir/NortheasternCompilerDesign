@@ -38,3 +38,5 @@ And then I run it
 ocaml functions.ml
 The maximum value is: 5
 ```
+
+In Functions, OCaml is the black sheep of Programming World. No return values during definition, when you call a function, you don't call it like `print(x)`, you call it `(print x)`.
