@@ -59,3 +59,15 @@ ocaml factorial.ml
 The factorial is 3628800
 ```
 
+#### Testing with OUnit
+
+Let's create a file called `test.ml`
+```ocaml
+open OUnit2
+let check_fun _ = (# a function of one argument*)
+  asset_equal (2+2) 4;;
+
+let my_first_test = "my_first_test">::check_fun;;
+```
+
+
