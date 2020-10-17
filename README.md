@@ -8,6 +8,7 @@ apt install ocaml
 I think same would follow for Ubuntu. Fedora, Gentoo, Arch, MacOS use their respective package managers (pacman, brew, yum etc.). For Windows, you can use WSL2 or Cygwin or just build from source.
 
 #### Hello World
+`Printf` is the output module we need to import using `open Printf`.
 ```ocaml
 open Printf
 
@@ -39,4 +40,22 @@ ocaml functions.ml
 The maximum value is: 5
 ```
 
-In Functions, OCaml is the black sheep of Programming World. No return values during definition, when you call a function, you don't call it like `print(x)`, you call it `(print x)`.
+In Functions, OCaml is the black sheep of Programming World. No return values during definition, when you call a function, you don't call it like `print(x)`, you call it `(print x)`. We will figure this out in a while.
+
+#### Recusive Functions & Factorials
+Now we write a factorial problem using recursive function. OCaml is pretty expressive and readable, reading through the code, you'll know what you are doing.
+```ocaml 
+open Printf
+
+let rec factorial (n:int) :int = 
+        if n<=1 then 1
+        else n*(factorial(n-1));;
+
+(printf "The factorial is %d\n" (factorial 10));
+```
+Let's run it
+```shell
+ocaml factorial.ml
+The factorial is 3628800
+```
+
